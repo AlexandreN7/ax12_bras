@@ -10,20 +10,11 @@
 
 
 
-#define SD1             18
-#define SD2             13
-#define SD3             17
+#define S1             14
+#define S2             7
+#define S3             6
+#define S4             5
 
-#define SG1             18
-#define SG2             42
-#define SG3             2
-
-void choose_arm(int);
-void init_arm(int);
-void catch_arm(int);
-void stock_arm(int);
-void pull_arm(int);
-void push_arm(int);
-void launch_net(int);
+void init_arm();
 #endif	/* ACTIONS_AX12_H */
 

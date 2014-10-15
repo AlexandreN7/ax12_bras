@@ -77,21 +77,21 @@ Program Memory  [Origin = 0x200, Length = 0xaa00]
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x200               0x152           0x1fb  (507)
-.text                        0x352               0x8da           0xd47  (3399)
-.init.delay32                0xc2c                0x1c            0x2a  (42)
-.dinit                       0xc48                0x16            0x21  (33)
+.text                        0x352               0x486           0x6c9  (1737)
+.init.delay32                0x7d8                0x1c            0x2a  (42)
+.dinit                       0x7f4                0x10            0x18  (24)
 
-                     Total program memory used (bytes):          0xf8d  (3981) 6%
+                     Total program memory used (bytes):          0x906  (2310) 3%
 
 
 Data Memory  [Origin = 0x800, Length = 0x4000]
 
 section                    address      alignment gaps    total length  (dec)
 -------                    -------      --------------    -------------------
-.nbss                        0x800                   0            0x16  (22)
-.ndata                       0x816                   0             0x2  (2)
+.nbss                        0x800                   0            0x10  (16)
+.ndata                       0x810                   0             0x2  (2)
 
-                        Total data memory used (bytes):           0x18  (24) <1%
+                        Total data memory used (bytes):           0x12  (18) <1%
 
 
 Dynamic Memory Usage
@@ -99,9 +99,9 @@ Dynamic Memory Usage
 region                     address                      maximum length  (dec)
 ------                     -------                      ---------------------
 heap                             0                                   0  (0)
-stack                        0x818                              0x3fe8  (16360)
+stack                        0x812                              0x3fee  (16366)
 
-                        Maximum dynamic memory (bytes):         0x3fe8  (16360)
+                        Maximum dynamic memory (bytes):         0x3fee  (16366)
 
 
 External Symbols in Data Memory (by address):
@@ -111,19 +111,13 @@ External Symbols in Data Memory (by address):
                     0x0804                  _responseAX
                     0x080c                  _expected
                     0x080e                  _received
-                    0x0810                  _S1
-                    0x0812                  _S2
-                    0x0814                  _S3
-                    0x0816                  _posAX
+                    0x0810                  _posAX
 
 External Symbols in Data Memory (by name):
 
-                    0x0810                  _S1
-                    0x0812                  _S2
-                    0x0814                  _S3
                     0x0800                  _checksumAX
                     0x080c                  _expected
-                    0x0816                  _posAX
+                    0x0810                  _posAX
                     0x080e                  _received
                     0x0804                  _responseAX
                     0x0802                  _responseReadyAX
@@ -143,82 +137,70 @@ External Symbols in Program Memory (by address):
                   0x00032a                  _OpenUART2
                   0x000332                  _ReadUART2
                   0x000344                  _WriteUART2
-                  0x000352                  _choose_arm
-                  0x000380                  _init_arm
-                  0x00042e                  _catch_arm
-                  0x000516                  _stock_arm
-                  0x0005c4                  _pull_arm
-                  0x0006ac                  _push_arm
-                  0x000782                  _launch_net
-                  0x0007d0                  _SetTX
-                  0x00080e                  _SetRX
-                  0x00084c                  _PushUART
-                  0x000872                  _PushHeaderAX
-                  0x00089e                  _PushBufferAX
-                  0x0008c6                  _PushFooterAX
-                  0x0008e2                  _InterruptAX
-                  0x0009d2                  _PingAX
-                  0x0009e4                  _ReadAX
-                  0x000a02                  _WriteAX
-                  0x000a28                  _RegWriteAX
-                  0x000a4e                  _ActionAX
-                  0x000a60                  _ResetAX
-                  0x000a72                  _RegisterLenAX
-                  0x000afa                  _PutAX
-                  0x000b20                  _GetAX
-                  0x000b3c                  _ConfigureOscillator
-                  0x000b60                  _InitApp
-                  0x000b84                  __T2Interrupt
-                  0x000bbe                  __U2RXInterrupt
-                  0x000bf6                  __U2TXInterrupt
-                  0x000c02                  _main
-                  0x000c2c                  ___delay32
+                  0x000352                  _SetTX
+                  0x000390                  _SetRX
+                  0x0003ce                  _PushUART
+                  0x0003f4                  _PushHeaderAX
+                  0x000420                  _PushBufferAX
+                  0x000448                  _PushFooterAX
+                  0x000464                  _InterruptAX
+                  0x000554                  _PingAX
+                  0x000566                  _ReadAX
+                  0x000584                  _WriteAX
+                  0x0005aa                  _RegWriteAX
+                  0x0005d0                  _ActionAX
+                  0x0005e2                  _ResetAX
+                  0x0005f4                  _RegisterLenAX
+                  0x00067c                  _PutAX
+                  0x0006a2                  _GetAX
+                  0x0006be                  _ConfigureOscillator
+                  0x0006e2                  _InitApp
+                  0x000706                  __T2Interrupt
+                  0x000740                  __U2RXInterrupt
+                  0x000778                  __U2TXInterrupt
+                  0x000784                  _main
+                  0x0007ae                  _init_arm
+                  0x0007d8                  ___delay32
 
 External Symbols in Program Memory (by name):
 
-                  0x000a4e                  _ActionAX
+                  0x0005d0                  _ActionAX
                   0x0002d2                  _BusyUART2
                   0x00029e                  _ConfigIntTimer2
                   0x0002dc                  _ConfigIntUART2
-                  0x000b3c                  _ConfigureOscillator
+                  0x0006be                  _ConfigureOscillator
                   0x000324                  _DataRdyUART2
-                  0x000b20                  _GetAX
-                  0x000b60                  _InitApp
-                  0x0008e2                  _InterruptAX
+                  0x0006a2                  _GetAX
+                  0x0006e2                  _InitApp
+                  0x000464                  _InterruptAX
                   0x0002c2                  _OpenTimer23
                   0x00032a                  _OpenUART2
-                  0x0009d2                  _PingAX
-                  0x00089e                  _PushBufferAX
-                  0x0008c6                  _PushFooterAX
-                  0x000872                  _PushHeaderAX
-                  0x00084c                  _PushUART
-                  0x000afa                  _PutAX
-                  0x0009e4                  _ReadAX
+                  0x000554                  _PingAX
+                  0x000420                  _PushBufferAX
+                  0x000448                  _PushFooterAX
+                  0x0003f4                  _PushHeaderAX
+                  0x0003ce                  _PushUART
+                  0x00067c                  _PutAX
+                  0x000566                  _ReadAX
                   0x000332                  _ReadUART2
-                  0x000a28                  _RegWriteAX
-                  0x000a72                  _RegisterLenAX
-                  0x000a60                  _ResetAX
-                  0x00080e                  _SetRX
-                  0x0007d0                  _SetTX
-                  0x000a02                  _WriteAX
+                  0x0005aa                  _RegWriteAX
+                  0x0005f4                  _RegisterLenAX
+                  0x0005e2                  _ResetAX
+                  0x000390                  _SetRX
+                  0x000352                  _SetTX
+                  0x000584                  _WriteAX
                   0x000344                  _WriteUART2
                   0x00029a                  __DefaultInterrupt
-                  0x000b84                  __T2Interrupt
-                  0x000bbe                  __U2RXInterrupt
-                  0x000bf6                  __U2TXInterrupt
-                  0x000c2c                  ___delay32
+                  0x000706                  __T2Interrupt
+                  0x000740                  __U2RXInterrupt
+                  0x000778                  __U2TXInterrupt
+                  0x0007d8                  ___delay32
                   0x00023c                  __data_init
                   0x00023c                  __data_init_standard
                   0x00022c                  __psv_init
                   0x000200                  __resetPRI
-                  0x00042e                  _catch_arm
-                  0x000352                  _choose_arm
-                  0x000380                  _init_arm
-                  0x000782                  _launch_net
-                  0x000c02                  _main
-                  0x0005c4                  _pull_arm
-                  0x0006ac                  _push_arm
-                  0x000516                  _stock_arm
+                  0x0007ae                  _init_arm
+                  0x000784                  _main
 
 Memory Configuration
 
@@ -362,34 +344,34 @@ __FUID3
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x1c56
+.debug_info       0x000000       0x1ac3
  *(.debug_info)
- .debug_info      0x000000        0x1b3 build/default/production/main.o
- .debug_info      0x0001b3        0x2a8 build/default/production/actions_ax12.o
- .debug_info      0x00045b        0xb13 build/default/production/ax12.o
- .debug_info      0x000f6e        0xce8 build/default/production/user-interrupts.o
+ .debug_info      0x000000        0x1ab build/default/production/main.o
+ .debug_info      0x0001ab        0x12d build/default/production/actions_ax12.o
+ .debug_info      0x0002d8        0xb0b build/default/production/ax12.o
+ .debug_info      0x000de3        0xce0 build/default/production/user-interrupts.o
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev     0x000000        0x362
+.debug_abbrev     0x000000        0x32d
  *(.debug_abbrev)
  .debug_abbrev    0x000000         0x6c build/default/production/main.o
- .debug_abbrev    0x00006c         0x67 build/default/production/actions_ax12.o
- .debug_abbrev    0x0000d3        0x1bb build/default/production/ax12.o
- .debug_abbrev    0x00028e         0xd4 build/default/production/user-interrupts.o
+ .debug_abbrev    0x00006c         0x32 build/default/production/actions_ax12.o
+ .debug_abbrev    0x00009e        0x1bb build/default/production/ax12.o
+ .debug_abbrev    0x000259         0xd4 build/default/production/user-interrupts.o
 
-.debug_line       0x000000        0xc36
+.debug_line       0x000000        0x7aa
  *(.debug_line)
- .debug_line      0x000000        0x113 build/default/production/main.o
- .debug_line      0x000113        0x50c build/default/production/actions_ax12.o
- .debug_line      0x00061f        0x48f build/default/production/ax12.o
- .debug_line      0x000aae        0x188 build/default/production/user-interrupts.o
+ .debug_line      0x000000        0x11b build/default/production/main.o
+ .debug_line      0x00011b         0x78 build/default/production/actions_ax12.o
+ .debug_line      0x000193        0x48f build/default/production/ax12.o
+ .debug_line      0x000622        0x188 build/default/production/user-interrupts.o
 
-.debug_frame      0x000000        0x220
+.debug_frame      0x000000        0x1c0
  *(.debug_frame)
  .debug_frame     0x000000         0x24 build/default/production/main.o
- .debug_frame     0x000024         0x84 build/default/production/actions_ax12.o
- .debug_frame     0x0000a8        0x114 build/default/production/ax12.o
- .debug_frame     0x0001bc         0x64 build/default/production/user-interrupts.o
+ .debug_frame     0x000024         0x24 build/default/production/actions_ax12.o
+ .debug_frame     0x000048        0x114 build/default/production/ax12.o
+ .debug_frame     0x00015c         0x64 build/default/production/user-interrupts.o
 
 .debug_str        0x000000         0xae
  *(.debug_str)
@@ -404,16 +386,16 @@ __FUID3
  *(.debug_macinfo)
 
 .debug_pubnames
-                  0x000000        0x277
+                  0x000000        0x20e
  *(.debug_pubnames)
  .debug_pubnames
                   0x000000         0x46 build/default/production/main.o
  .debug_pubnames
-                  0x000046         0x88 build/default/production/actions_ax12.o
+                  0x000046         0x1f build/default/production/actions_ax12.o
  .debug_pubnames
-                  0x0000ce        0x13c build/default/production/ax12.o
+                  0x000065        0x13c build/default/production/ax12.o
  .debug_pubnames
-                  0x00020a         0x6d build/default/production/user-interrupts.o
+                  0x0001a1         0x6d build/default/production/user-interrupts.o
 
 .debug_ranges
  *(.debug_ranges)
@@ -445,7 +427,7 @@ __FUID3
                   0x00001c          0x4 LONG 0x29a DEFINED (__DMA0Interrupt)?ABSOLUTE (__DMA0Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00001e          0x4 LONG 0x29a DEFINED (__IC2Interrupt)?ABSOLUTE (__IC2Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000020          0x4 LONG 0x29a DEFINED (__OC2Interrupt)?ABSOLUTE (__OC2Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000022          0x4 LONG 0xb84 DEFINED (__T2Interrupt)?ABSOLUTE (__T2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000022          0x4 LONG 0x706 DEFINED (__T2Interrupt)?ABSOLUTE (__T2Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000024          0x4 LONG 0x29a DEFINED (__T3Interrupt)?ABSOLUTE (__T3Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000026          0x4 LONG 0x29a DEFINED (__SPI1ErrInterrupt)?ABSOLUTE (__SPI1ErrInterrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000028          0x4 LONG 0x29a DEFINED (__SPI1Interrupt)?ABSOLUTE (__SPI1Interrupt):ABSOLUTE (__DefaultInterrupt)
@@ -468,8 +450,8 @@ __FUID3
                   0x00004a          0x4 LONG 0x29a DEFINED (__T4Interrupt)?ABSOLUTE (__T4Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00004c          0x4 LONG 0x29a DEFINED (__T5Interrupt)?ABSOLUTE (__T5Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00004e          0x4 LONG 0x29a DEFINED (__INT2Interrupt)?ABSOLUTE (__INT2Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000050          0x4 LONG 0xbbe DEFINED (__U2RXInterrupt)?ABSOLUTE (__U2RXInterrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000052          0x4 LONG 0xbf6 DEFINED (__U2TXInterrupt)?ABSOLUTE (__U2TXInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000050          0x4 LONG 0x740 DEFINED (__U2RXInterrupt)?ABSOLUTE (__U2RXInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000052          0x4 LONG 0x778 DEFINED (__U2TXInterrupt)?ABSOLUTE (__U2TXInterrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000054          0x4 LONG 0x29a DEFINED (__SPI2ErrInterrupt)?ABSOLUTE (__SPI2ErrInterrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000056          0x4 LONG 0x29a DEFINED (__SPI2Interrupt)?ABSOLUTE (__SPI2Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000058          0x4 LONG 0x29a DEFINED (__C1RxRdyInterrupt)?ABSOLUTE (__C1RxRdyInterrupt):ABSOLUTE (__DefaultInterrupt)
@@ -573,7 +555,7 @@ __FUID3
                   0x00011c          0x4 LONG 0x29a DEFINED (__AltDMA0Interrupt)?ABSOLUTE (__AltDMA0Interrupt):DEFINED (__DMA0Interrupt)?ABSOLUTE (__DMA0Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00011e          0x4 LONG 0x29a DEFINED (__AltIC2Interrupt)?ABSOLUTE (__AltIC2Interrupt):DEFINED (__IC2Interrupt)?ABSOLUTE (__IC2Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000120          0x4 LONG 0x29a DEFINED (__AltOC2Interrupt)?ABSOLUTE (__AltOC2Interrupt):DEFINED (__OC2Interrupt)?ABSOLUTE (__OC2Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000122          0x4 LONG 0xb84 DEFINED (__AltT2Interrupt)?ABSOLUTE (__AltT2Interrupt):DEFINED (__T2Interrupt)?ABSOLUTE (__T2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000122          0x4 LONG 0x706 DEFINED (__AltT2Interrupt)?ABSOLUTE (__AltT2Interrupt):DEFINED (__T2Interrupt)?ABSOLUTE (__T2Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000124          0x4 LONG 0x29a DEFINED (__AltT3Interrupt)?ABSOLUTE (__AltT3Interrupt):DEFINED (__T3Interrupt)?ABSOLUTE (__T3Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000126          0x4 LONG 0x29a DEFINED (__AltSPI1ErrInterrupt)?ABSOLUTE (__AltSPI1ErrInterrupt):DEFINED (__SPI1ErrInterrupt)?ABSOLUTE (__SPI1ErrInterrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000128          0x4 LONG 0x29a DEFINED (__AltSPI1Interrupt)?ABSOLUTE (__AltSPI1Interrupt):DEFINED (__SPI1Interrupt)?ABSOLUTE (__SPI1Interrupt):ABSOLUTE (__DefaultInterrupt)
@@ -596,8 +578,8 @@ __FUID3
                   0x00014a          0x4 LONG 0x29a DEFINED (__AltT4Interrupt)?ABSOLUTE (__AltT4Interrupt):DEFINED (__T4Interrupt)?ABSOLUTE (__T4Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00014c          0x4 LONG 0x29a DEFINED (__AltT5Interrupt)?ABSOLUTE (__AltT5Interrupt):DEFINED (__T5Interrupt)?ABSOLUTE (__T5Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00014e          0x4 LONG 0x29a DEFINED (__AltINT2Interrupt)?ABSOLUTE (__AltINT2Interrupt):DEFINED (__INT2Interrupt)?ABSOLUTE (__INT2Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000150          0x4 LONG 0xbbe DEFINED (__AltU2RXInterrupt)?ABSOLUTE (__AltU2RXInterrupt):DEFINED (__U2RXInterrupt)?ABSOLUTE (__U2RXInterrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000152          0x4 LONG 0xbf6 DEFINED (__AltU2TXInterrupt)?ABSOLUTE (__AltU2TXInterrupt):DEFINED (__U2TXInterrupt)?ABSOLUTE (__U2TXInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000150          0x4 LONG 0x740 DEFINED (__AltU2RXInterrupt)?ABSOLUTE (__AltU2RXInterrupt):DEFINED (__U2RXInterrupt)?ABSOLUTE (__U2RXInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000152          0x4 LONG 0x778 DEFINED (__AltU2TXInterrupt)?ABSOLUTE (__AltU2TXInterrupt):DEFINED (__U2TXInterrupt)?ABSOLUTE (__U2TXInterrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000154          0x4 LONG 0x29a DEFINED (__AltSPI2ErrInterrupt)?ABSOLUTE (__AltSPI2ErrInterrupt):DEFINED (__SPI2ErrInterrupt)?ABSOLUTE (__SPI2ErrInterrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000156          0x4 LONG 0x29a DEFINED (__AltSPI2Interrupt)?ABSOLUTE (__AltSPI2Interrupt):DEFINED (__SPI2Interrupt)?ABSOLUTE (__SPI2Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000158          0x4 LONG 0x29a DEFINED (__AltC1RxRdyInterrupt)?ABSOLUTE (__AltC1RxRdyInterrupt):DEFINED (__C1RxRdyInterrupt)?ABSOLUTE (__C1RxRdyInterrupt):ABSOLUTE (__DefaultInterrupt)
@@ -1817,60 +1799,50 @@ __c30_signature
  __c30_signature
                   0x000276          0x6 /opt/microchip/xc16/v1.23/bin/bin/../../lib/libpic30-elf.a(delay32.eo)
 
-.nbss               0x0800         0x16
+.nbss               0x0800         0x10
  .nbss              0x0800         0x10 build/default/production/ax12.o
                     0x0800                  _checksumAX
                     0x0802                  _responseReadyAX
                     0x0804                  _responseAX
                     0x080c                  _expected
                     0x080e                  _received
- .nbss              0x0810          0x6 build/default/production/actions_ax12.o
-                    0x0810                  _S1
-                    0x0812                  _S2
-                    0x0814                  _S3
 
-.ndata              0x0816          0x2
- .ndata             0x0816          0x2 build/default/production/ax12.o
-                    0x0816                  _posAX
+.ndata              0x0810          0x2
+ .ndata             0x0810          0x2 build/default/production/ax12.o
+                    0x0810                  _posAX
 
-.text             0x000352        0x8da
- .text            0x000352        0x47e build/default/production/actions_ax12.o
-                  0x000352                  _choose_arm
-                  0x000380                  _init_arm
-                  0x00042e                  _catch_arm
-                  0x000516                  _stock_arm
-                  0x0005c4                  _pull_arm
-                  0x0006ac                  _push_arm
-                  0x000782                  _launch_net
- .text            0x0007d0        0x36c build/default/production/ax12.o
-                  0x0007d0                  _SetTX
-                  0x00080e                  _SetRX
-                  0x00084c                  _PushUART
-                  0x000872                  _PushHeaderAX
-                  0x00089e                  _PushBufferAX
-                  0x0008c6                  _PushFooterAX
-                  0x0008e2                  _InterruptAX
-                  0x0009d2                  _PingAX
-                  0x0009e4                  _ReadAX
-                  0x000a02                  _WriteAX
-                  0x000a28                  _RegWriteAX
-                  0x000a4e                  _ActionAX
-                  0x000a60                  _ResetAX
-                  0x000a72                  _RegisterLenAX
-                  0x000afa                  _PutAX
-                  0x000b20                  _GetAX
- .text            0x000b3c         0xc6 build/default/production/user-interrupts.o
-                  0x000b3c                  _ConfigureOscillator
-                  0x000b60                  _InitApp
-                  0x000b84                  __T2Interrupt
-                  0x000bbe                  __U2RXInterrupt
-                  0x000bf6                  __U2TXInterrupt
- .text            0x000c02         0x2a build/default/production/main.o
-                  0x000c02                  _main
+.text             0x000352        0x486
+ .text            0x000352        0x36c build/default/production/ax12.o
+                  0x000352                  _SetTX
+                  0x000390                  _SetRX
+                  0x0003ce                  _PushUART
+                  0x0003f4                  _PushHeaderAX
+                  0x000420                  _PushBufferAX
+                  0x000448                  _PushFooterAX
+                  0x000464                  _InterruptAX
+                  0x000554                  _PingAX
+                  0x000566                  _ReadAX
+                  0x000584                  _WriteAX
+                  0x0005aa                  _RegWriteAX
+                  0x0005d0                  _ActionAX
+                  0x0005e2                  _ResetAX
+                  0x0005f4                  _RegisterLenAX
+                  0x00067c                  _PutAX
+                  0x0006a2                  _GetAX
+ .text            0x0006be         0xc6 build/default/production/user-interrupts.o
+                  0x0006be                  _ConfigureOscillator
+                  0x0006e2                  _InitApp
+                  0x000706                  __T2Interrupt
+                  0x000740                  __U2RXInterrupt
+                  0x000778                  __U2TXInterrupt
+ .text            0x000784         0x2a build/default/production/main.o
+                  0x000784                  _main
+ .text            0x0007ae         0x2a build/default/production/actions_ax12.o
+                  0x0007ae                  _init_arm
 
-.init.delay32     0x000c2c         0x1c
- .init.delay32    0x000c2c         0x1c /opt/microchip/xc16/v1.23/bin/bin/../../lib/libpic30-elf.a(delay32.eo)
-                  0x000c2c                  ___delay32
+.init.delay32     0x0007d8         0x1c
+ .init.delay32    0x0007d8         0x1c /opt/microchip/xc16/v1.23/bin/bin/../../lib/libpic30-elf.a(delay32.eo)
+                  0x0007d8                  ___delay32
 
-.dinit            0x000c48         0x16
- .dinit           0x000c48         0x16 data_init
+.dinit            0x0007f4         0x10
+ .dinit           0x0007f4         0x10 data_init

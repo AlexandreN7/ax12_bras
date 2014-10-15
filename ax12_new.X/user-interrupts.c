@@ -27,6 +27,9 @@
 /******************************************************************************/
 #define BAUDRATEAX12 57600
 //#define BAUDRATEAX12 9600
+//#define BAUDRATEAX12 4800
+//#define BAUDRATEAX12 19200
+//#define BAUDRATEAX12 115200
 
 #define BRGVALAX12 ((FCY / BAUDRATEAX12 / 16) - 1)
 
