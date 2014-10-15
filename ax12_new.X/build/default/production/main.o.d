@@ -1,2 +1,5 @@
 build/default/production/main.o:  \
-main.c 
+main.c  \
+header.h  \
+ax12.h  \
+actions_ax12.h 
