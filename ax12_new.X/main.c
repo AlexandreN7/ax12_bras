@@ -52,18 +52,19 @@ int16_t main(void) {
     InitApp();
     responseReadyAX = 0;
 
-  PutAX(254, AX_BAUD_RATE, 34);
+
          
     while (1) {
 
         init_arm();
 
-    __delay_ms(2000);
+    __delay_ms(2800);
 
-        PutAX(AX_BROADCAST, AX_GOAL_POSITION, 700);
+        PutAX(AX_BROADCAST, AX_GOAL_POSITION, 650);
 
-    __delay_ms(2000);
+    __delay_ms(2800);
 
     }
+
 }
 
