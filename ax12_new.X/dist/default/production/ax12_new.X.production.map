@@ -77,11 +77,11 @@ Program Memory  [Origin = 0x200, Length = 0xaa00]
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x200               0x152           0x1fb  (507)
-.text                        0x352               0x47e           0x6bd  (1725)
-.init.delay32                0x7d0                0x1c            0x2a  (42)
-.dinit                       0x7ec                0x10            0x18  (24)
+.text                        0x352               0x48a           0x6cf  (1743)
+.init.delay32                0x7dc                0x1c            0x2a  (42)
+.dinit                       0x7f8                0x10            0x18  (24)
 
-                     Total program memory used (bytes):          0x8fa  (2298) 3%
+                     Total program memory used (bytes):          0x90c  (2316) 3%
 
 
 Data Memory  [Origin = 0x800, Length = 0x4000]
@@ -159,8 +159,8 @@ External Symbols in Program Memory (by address):
                   0x000740                  __U2RXInterrupt
                   0x000778                  __U2TXInterrupt
                   0x000784                  _init_arm
-                  0x0007ae                  _main
-                  0x0007d0                  ___delay32
+                  0x0007b4                  _main
+                  0x0007dc                  ___delay32
 
 External Symbols in Program Memory (by name):
 
@@ -194,13 +194,13 @@ External Symbols in Program Memory (by name):
                   0x000706                  __T2Interrupt
                   0x000740                  __U2RXInterrupt
                   0x000778                  __U2TXInterrupt
-                  0x0007d0                  ___delay32
+                  0x0007dc                  ___delay32
                   0x00023c                  __data_init
                   0x00023c                  __data_init_standard
                   0x00022c                  __psv_init
                   0x000200                  __resetPRI
                   0x000784                  _init_arm
-                  0x0007ae                  _main
+                  0x0007b4                  _main
 
 Memory Configuration
 
@@ -359,12 +359,12 @@ __FUID3
  .debug_abbrev    0x00009e        0x1bb build/default/production/ax12.o
  .debug_abbrev    0x000259         0xd4 build/default/production/user-interrupts.o
 
-.debug_line       0x000000        0x7a2
+.debug_line       0x000000        0x7aa
  *(.debug_line)
  .debug_line      0x000000        0x113 build/default/production/main.o
- .debug_line      0x000113         0x78 build/default/production/actions_ax12.o
- .debug_line      0x00018b        0x48f build/default/production/ax12.o
- .debug_line      0x00061a        0x188 build/default/production/user-interrupts.o
+ .debug_line      0x000113         0x80 build/default/production/actions_ax12.o
+ .debug_line      0x000193        0x48f build/default/production/ax12.o
+ .debug_line      0x000622        0x188 build/default/production/user-interrupts.o
 
 .debug_frame      0x000000        0x1c0
  *(.debug_frame)
@@ -1811,7 +1811,7 @@ __c30_signature
  .ndata             0x0810          0x2 build/default/production/ax12.o
                     0x0810                  _posAX
 
-.text             0x000352        0x47e
+.text             0x000352        0x48a
  .text            0x000352        0x36c build/default/production/ax12.o
                   0x000352                  _SetTX
                   0x000390                  _SetRX
@@ -1835,14 +1835,14 @@ __c30_signature
                   0x000706                  __T2Interrupt
                   0x000740                  __U2RXInterrupt
                   0x000778                  __U2TXInterrupt
- .text            0x000784         0x2a build/default/production/actions_ax12.o
+ .text            0x000784         0x30 build/default/production/actions_ax12.o
                   0x000784                  _init_arm
- .text            0x0007ae         0x22 build/default/production/main.o
-                  0x0007ae                  _main
+ .text            0x0007b4         0x28 build/default/production/main.o
+                  0x0007b4                  _main
 
-.init.delay32     0x0007d0         0x1c
- .init.delay32    0x0007d0         0x1c /opt/microchip/xc16/v1.23/bin/bin/../../lib/libpic30-elf.a(delay32.eo)
-                  0x0007d0                  ___delay32
+.init.delay32     0x0007dc         0x1c
+ .init.delay32    0x0007dc         0x1c /opt/microchip/xc16/v1.23/bin/bin/../../lib/libpic30-elf.a(delay32.eo)
+                  0x0007dc                  ___delay32
 
-.dinit            0x0007ec         0x10
- .dinit           0x0007ec         0x10 data_init
+.dinit            0x0007f8         0x10
+ .dinit           0x0007f8         0x10 data_init

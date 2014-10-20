@@ -55,16 +55,21 @@ int16_t main(void) {
 
          
     while (1) {
-
-        init_arm();
-
-    __delay_ms(2800);
-
-        PutAX(AX_BROADCAST, AX_GOAL_POSITION, 650);
+/*
+    init_arm();
 
     __delay_ms(2800);
 
-    }
+   PutAX(14, AX_GOAL_POSITION, 580);
+  //  PutAX(254, AX_LED, 1);
+    
+    __delay_ms(2800);
+
+    }*/
+    PutAX(254,AX_LED , 1);
+    __delay_ms(500);
+    PutAX(254,AX_LED , 0);
+    __delay_ms(500);
 
 }
-
+}

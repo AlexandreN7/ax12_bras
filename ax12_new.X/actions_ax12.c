@@ -17,11 +17,11 @@
 void init_arm() {
 
 
-    PutAX(AX_BROADCAST, AX_TORQUE_LIMIT, 1023);
-    __delay_ms(40);
+    PutAX(AX_BROADCAST, AX_TORQUE_LIMIT, 900);
+    __delay_ms(80);
 
-    PutAX(AX_BROADCAST, AX_MOVING_SPEED, 50);
-
+    PutAX(AX_BROADCAST, AX_MOVING_SPEED, 20);
+    __delay_ms(80);
 
     PutAX(AX_BROADCAST, AX_GOAL_POSITION, 500);
     __delay_ms(100);

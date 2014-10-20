@@ -6,8 +6,8 @@
 CND_BASEDIR=`pwd`
 # default configuration
 CND_ARTIFACT_DIR_default=dist/default/production
-CND_ARTIFACT_NAME_default=ax12_new.X.production.hex
-CND_ARTIFACT_PATH_default=dist/default/production/ax12_new.X.production.hex
+CND_ARTIFACT_NAME_default=ax12_new.X.production.null
+CND_ARTIFACT_PATH_default=dist/default/production/ax12_new.X.production.null
 CND_PACKAGE_DIR_default=${CND_DISTDIR}/default/package
 CND_PACKAGE_NAME_default=ax12new.x.tar
 CND_PACKAGE_PATH_default=${CND_DISTDIR}/default/package/ax12new.x.tar
